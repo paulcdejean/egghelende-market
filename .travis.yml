@@ -1,9 +1,12 @@
 language: python
 python:
-  - "2.7"
-
-# Command to install dependencies.
+- '2.7'
 install: pip install -r requirements.txt
-
-# Command to run tests.
 script: python manage.py test
+deploy:
+  provider: heroku
+  api_key:
+    secure: rRSFVTNpP0RP/pEv8kCleGF0+2YYQEEsM8eNke0RSThyJxmIHoXUxbnonE1XP6/wp85zOklsB0A9kc7AiGMaYBqol6uKXv0EOGgx+mZd0xr3PQBxfup+z8/xFTMNduM0lfGJkK5WDQsDv8qFkEFNqzjayP23eharYH3ufQKRwFU=
+  app: eggmarket
+  on:
+    repo: paulcdejean/egghelende-market
