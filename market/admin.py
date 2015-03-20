@@ -1,4 +1,6 @@
 from django.contrib import admin
-from market.models import Item
+import market.models
 
-admin.site.register(Item)
+admin.site.register(market.models.Item)
+admin.site.register(market.models.Material)
+admin.site.register(market.models.ItemMaterial)

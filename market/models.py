@@ -11,3 +11,17 @@ class Item(models.Model):
 
     def __unicode__(self):
         return self.item_name
+
+class Material(models.Model):
+    material_name = models.CharField(max_length=255)
+
+    def __unicode__(self):
+        return self.material_name
+
+class ItemMaterial(models.Model):
+    item = models.ForeignKey("Item")
+    material = models.ForeignKey("Material")
+    quantity = models.IntegerField()
+
+    def __unicode__(self):
+        return self.item.item_name + " - " + self.material.material_name
