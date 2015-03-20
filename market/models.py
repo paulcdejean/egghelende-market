@@ -8,3 +8,6 @@ class Item(models.Model):
     in_build = models.IntegerField()
     in_need = models.IntegerField()
     total_sold = models.IntegerField()
+
+    def __unicode__(self):
+        return self.item_name
