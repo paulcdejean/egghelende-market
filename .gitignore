@@ -1,3 +1,4 @@
-egg-venv/
+/egg-venv/
 **.pyc
-staticfiles/
+/staticfiles/*
+!staticfiles/.empty
